@@ -1,4 +1,4 @@
-library register_module;
+library registration_module;
 
 /// A Calculator.
 class Calculator {
