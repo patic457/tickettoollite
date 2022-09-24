@@ -61,6 +61,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.pink,
       ),
+      onGenerateRoute: (route) {
+        return materialPageRoute(route);
+      },
     );
   }
 }
