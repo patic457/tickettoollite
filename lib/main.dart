@@ -17,7 +17,6 @@ import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
 import 'package:tickettoollite/MyHomePage.dart';
 import 'package:tickettoollite/MyHomePage2.dart';
-import 'package:tickettoollite/MySplashScreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,9 +32,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.pink,
       ),
-      initialRoute: '/',
+      initialRoute: '/1',
       routes: {
-        '/': (context) => MySplashScreen(),
         '/1': (context) => const MyHomePage(title: 'Soso Ticket Tool'),
         '/2': (context) => const MyHomePage2(title: 'Soso2'),
       },
