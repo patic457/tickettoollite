@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+class MyHomePage2 extends StatefulWidget {
+  const MyHomePage2({super.key, required this.title});
 
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MyHomePage2> createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyHomePageState extends State<MyHomePage2> {
   var chText = "Profile";
   int _selectedIndex = 0;
 
@@ -49,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _createTicket() {
-    Navigator.pushNamed(context, '/2');
+    Navigator.pushNamed(context, '/create');
   }
 
   @override
@@ -57,7 +57,7 @@ class _MyHomePageState extends State<MyHomePage> {
     Widget floatingActionButtonv1 = FloatingActionButton(
       backgroundColor: Colors.green[900],
       child: const Icon(FontAwesomeIcons.plus),
-      onPressed: _createTicket,
+      onPressed: () {},
     );
 
     Widget bottomNavigationBarv1 = BottomNavigationBar(
@@ -80,12 +80,14 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
 
+    Widget bodyv2 = Center();
+
     return Scaffold(
       appBar: appbarv1,
-      body: bodyv1,
-      bottomNavigationBar: bottomNavigationBarv1,
-      floatingActionButton: floatingActionButtonv1,
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      body: bodyv2,
+      // bottomNavigationBar: bottomNavigationBarv1,
+      // floatingActionButton: floatingActionButtonv1,
+      // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }

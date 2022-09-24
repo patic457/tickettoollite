@@ -15,6 +15,7 @@
 import 'package:app/app.dart';
 import 'package:flutter/material.dart';
 import 'package:tickettoollite/MyHomePage.dart';
+import 'package:tickettoollite/MyHomePage2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const MyHomePage(title: 'Soso Ticket Tool'),
+        '/2': (context) => const MyHomePage2(title: 'Soso2'),
       },
     );
   }
