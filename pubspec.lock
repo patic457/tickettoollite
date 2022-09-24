@@ -158,6 +158,13 @@ packages:
       relative: true
     source: path
     version: "0.0.1"
+  setting_module:
+    dependency: transitive
+    description:
+      path: "module/setting_module"
+      relative: true
+    source: path
+    version: "0.0.1"
   sky_engine:
     dependency: transitive
     description: flutter

@@ -11,8 +11,10 @@ dependencies:
   flutter:
     sdk: flutter
 
-  profile_module:
-    path: ../../
+  main:
+    path: ../../module/main
+  setting_module:
+    path: ../../module/setting_module
 
 dev_dependencies:
   flutter_test:
