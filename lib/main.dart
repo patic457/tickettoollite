@@ -14,6 +14,7 @@
 
 import 'package:app/app.dart';
 import 'package:flutter/material.dart';
+import 'package:tickettoollite/MyHomePage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,8 +32,7 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => const AppWidget(),
-        // '/second': (context) => SecondScreen(),
+        '/': (context) => const MyHomePage(title: 'Soso Ticket Tool'),
       },
     );
   }
