@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MyHomePage2 extends StatefulWidget {
-  // const MyHomePage2({super.key, required this.title});
   final Function(String) navigate;
   const MyHomePage2({
     Key? key,
