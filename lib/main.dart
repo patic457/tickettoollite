@@ -15,7 +15,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.pink,
       ),
-      home: const MyHomePage(title: 'Soso Ticket Tool'),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const MyHomePage(title: 'Soso Ticket Tool'),
+        // '/second': (context) => SecondScreen(),
+      },
     );
   }
 }

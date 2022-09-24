@@ -11,10 +11,17 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  var chText = "Profile";
 
   void _incrementCounter() {
     setState(() {
       _counter++;
+    });
+  }
+
+  void _changeText() {
+    setState(() {
+      chText = 'Hi';
     });
   }
 
@@ -44,10 +51,8 @@ class _MyHomePageState extends State<MyHomePage> {
     );
     var bodyv2 = Center(
       child: ElevatedButton(
-        child: const Text('Open route'),
-        onPressed: () {
-          // Navigate to second route when tapped.
-        },
+        child: Text(chText),
+        onPressed: _changeText,
       ),
     );
     return Scaffold(
