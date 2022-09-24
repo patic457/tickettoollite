@@ -74,9 +74,20 @@ class _MyHomePageState extends State<MyHomePage> {
     );
 
     Widget bodyv1 = Center(
-      child: ElevatedButton(
-        child: Text(chText),
-        onPressed: () {},
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          ElevatedButton(
+            child: Text('Profile Menu'),
+            onPressed: () {},
+          ),
+          SizedBox(height: 15.0),
+          ElevatedButton(
+            child: Text('Soso2'),
+            onPressed: _createTicket,
+          ),
+        ],
       ),
     );
 

@@ -70,6 +70,7 @@ class _MyHomePageState extends State<MyHomePage2> {
     );
 
     AppBar appbarv1 = AppBar(
+      
       title: Text(widget.title),
     );
 
