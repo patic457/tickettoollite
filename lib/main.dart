@@ -18,8 +18,6 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const MyHomePage(title: 'Soso Ticket Tool'),
-        '/create': (context) => const MyHomePage(title: 'Create Ticket'),
-        // '/second': (context) => SecondScreen(),
       },
     );
   }
