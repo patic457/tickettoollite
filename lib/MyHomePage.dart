@@ -3,10 +3,9 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MyHomePage extends StatefulWidget {
   // const MyHomePage({super.key, required this.title});
-  final Function(String) navigate;
+
   const MyHomePage({
     Key? key,
-    required this.navigate,
     required this.title,
   }) : super(key: key);
 
@@ -54,8 +53,8 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  void _createTicket() {
-    Navigator.pushNamed(context, '/2');
+  void _profileScreen() {
+    Navigator.pushNamed(context, '/profile');
   }
 
   @override
@@ -63,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
     Widget floatingActionButtonv1 = FloatingActionButton(
       backgroundColor: Colors.green[900],
       child: const Icon(FontAwesomeIcons.plus),
-      onPressed: _createTicket,
+      onPressed: _profileScreen,
     );
 
     Widget bottomNavigationBarv1 = BottomNavigationBar(
@@ -86,17 +85,9 @@ class _MyHomePageState extends State<MyHomePage> {
         children: [
           ElevatedButton(
             child: Text('Profile Menu'),
-            onPressed: () {
-              widget.navigate('/profile');
-            },
+            onPressed: _profileScreen,
           ),
           SizedBox(height: 15.0),
-          ElevatedButton(
-            child: Text('Soso2'),
-            onPressed: () {
-              widget.navigate('/page2');
-            },
-          ),
         ],
       ),
     );
@@ -105,8 +96,8 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: appbarv1,
       body: bodyv1,
       bottomNavigationBar: bottomNavigationBarv1,
-      floatingActionButton: floatingActionButtonv1,
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      // floatingActionButton: floatingActionButtonv1,
+      // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }

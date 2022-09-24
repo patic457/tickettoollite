@@ -9,7 +9,8 @@ class MyRouter {
         return MaterialPageRoute(
             builder: (_) => MyHomePage(title: 'Soso Ticket Tool'));
       case '/profile':
-        return MaterialPageRoute(builder: (_) => Profile(title: 'Profile'));
+        return MaterialPageRoute(
+            builder: (_) => Profile(title: 'Soso Ticket Tool'));
       default:
         return MaterialPageRoute(
             builder: (_) => Scaffold(
@@ -18,4 +19,21 @@ class MyRouter {
                 ));
     }
   }
+
+  // Route<dynamic> generateRoute(RouteSettings settings) {
+  //   switch (settings.name) {
+  //     case '/':
+  //       return MaterialPageRoute(
+  //           builder: (_) => MyHomePage(title: 'Soso Ticket Tool'));
+  //     case '/profile':
+  //       return MaterialPageRoute(
+  //           builder: (_) => Profile(title: 'Soso Ticket Tool'));
+  //     default:
+  //       return MaterialPageRoute(
+  //           builder: (_) => Scaffold(
+  //                 body: Center(
+  //                     child: Text('No route defined for ${settings.name}')),
+  //               ));
+  //   }
+  // }
 }
