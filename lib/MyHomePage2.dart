@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MyHomePage2 extends StatefulWidget {
-  const MyHomePage2({super.key, required this.title});
+  const MyHomePage2({super.key, required this.navigate, required this.title});
 
   final String title;
+  final Function(String) navigate;
 
   @override
   State<MyHomePage2> createState() => _MyHomePageState();
@@ -70,7 +71,6 @@ class _MyHomePageState extends State<MyHomePage2> {
     );
 
     AppBar appbarv1 = AppBar(
-      
       title: Text(widget.title),
     );
 

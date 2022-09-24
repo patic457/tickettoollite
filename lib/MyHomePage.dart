@@ -93,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
           SizedBox(height: 15.0),
           ElevatedButton(
             child: Text('Soso2'),
-            onPressed: _createTicket,
+            onPressed: widget.navigate('/mypage2'),
           ),
         ],
       ),
