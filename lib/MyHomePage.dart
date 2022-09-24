@@ -55,9 +55,10 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     Widget floatingActionButtonv1 = FloatingActionButton(
-        backgroundColor: Colors.green[900],
-        child: Icon(FontAwesomeIcons.plus),
-        onPressed: () {});
+      backgroundColor: Colors.green[900],
+      child: const Icon(FontAwesomeIcons.plus),
+      onPressed: () {},
+    );
 
     Widget bottomNavigationBarv1 = BottomNavigationBar(
       items: _menuBar,
