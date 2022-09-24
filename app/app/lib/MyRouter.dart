@@ -8,7 +8,8 @@ class MyRouter {
     switch (settings.name) {
       case '/':
         return MaterialPageRoute(
-            builder: (_) => MainScreen(title: 'Soso Ticket Tool'));
+          builder: (_) => MainScreen(title: 'Soso Ticket Tool'),
+        );
       case '/profile':
         return MaterialPageRoute(
             builder: (_) => ProfileScreen(title: 'Profile Menu'));
