@@ -54,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    Widget floatingActionButtonv1 = FloatingActionButton.large(
+    Widget floatingActionButtonv1 = FloatingActionButton(
         backgroundColor: Colors.green[900],
         child: Icon(FontAwesomeIcons.plus),
         onPressed: () {});
