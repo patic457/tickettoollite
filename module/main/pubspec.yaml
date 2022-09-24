@@ -10,6 +10,18 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  font_awesome_flutter: ^10.2.1
+
+
+
+
+  #Modular
+  profile_module:
+    path: ../profile_module
+  ticket_module:
+    path: ../ticket_module
+
+
 
 dev_dependencies:
   flutter_test:

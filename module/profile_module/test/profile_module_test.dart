@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:profile_module/profile_module.dart';
+import 'package:profile_module/ProfileScreen.dart';
 
 void main() {
   test('adds one to input values', () {

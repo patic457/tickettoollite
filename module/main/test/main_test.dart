@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:main/main.dart';
+import 'package:main/MainScreen.dart';
 
 void main() {
   test('adds one to input values', () {

@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 
-class Profile extends StatefulWidget {
+class ProfileScreen extends StatefulWidget {
   // const Profile({super.key});
-  const Profile({
+
+  const ProfileScreen({
     Key? key,
     required this.title,
   }) : super(key: key);
   final String title;
 
   @override
-  State<Profile> createState() => _ProfileState();
+  State<ProfileScreen> createState() => _ProfileState();
 }
 
-class _ProfileState extends State<Profile> {
+class _ProfileState extends State<ProfileScreen> {
   void _editAddressScreen() {
     Navigator.pushNamed(context, '/address');
   }
