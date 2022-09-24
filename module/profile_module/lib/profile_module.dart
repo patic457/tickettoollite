@@ -4,10 +4,9 @@ import 'package:flutter/src/widgets/framework.dart';
 
 class Profile extends StatelessWidget {
   // const Profile({super.key});
-  final Function(String) navigate;
+
   const Profile({
     Key? key,
-    required this.navigate,
     required this.title,
   }) : super(key: key);
 
