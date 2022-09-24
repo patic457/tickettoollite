@@ -2,7 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MyHomePage2 extends StatefulWidget {
-  const MyHomePage2({super.key, required this.title});
+  // const MyHomePage2({super.key, required this.title});
+  final Function(String) navigate;
+  const MyHomePage2({
+    Key? key,
+    required this.navigate,
+    required this.title,
+  }) : super(key: key);
 
   final String title;
 
@@ -70,7 +76,6 @@ class _MyHomePageState extends State<MyHomePage2> {
     );
 
     AppBar appbarv1 = AppBar(
-      
       title: Text(widget.title),
     );
 
