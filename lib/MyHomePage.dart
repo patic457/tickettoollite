@@ -2,7 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+  // const MyHomePage({super.key, required this.title});
+  final Function(String) navigate;
+  const MyHomePage({
+    Key? key,
+    required this.navigate,
+    required this.title,
+  }) : super(key: key);
 
   final String title;
 
@@ -80,7 +86,9 @@ class _MyHomePageState extends State<MyHomePage> {
         children: [
           ElevatedButton(
             child: Text('Profile Menu'),
-            onPressed: () {},
+            onPressed: () {
+              widget.navigate('/profile');
+            },
           ),
           SizedBox(height: 15.0),
           ElevatedButton(

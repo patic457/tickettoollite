@@ -46,6 +46,8 @@ dependencies:
     path: app/app
   main:
     path: module/main
+  profile_module:
+    path: module/profile_module
 
 dev_dependencies:
   flutter_test:
