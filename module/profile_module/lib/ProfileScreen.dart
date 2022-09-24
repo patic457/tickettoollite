@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class Profile extends StatelessWidget {
+class ProfileScreen extends StatelessWidget {
   // const Profile({super.key});
 
-  const Profile({
+  const ProfileScreen({
     Key? key,
     required this.title,
   }) : super(key: key);

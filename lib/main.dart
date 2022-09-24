@@ -1,7 +1,6 @@
+import 'package:app/MyRouter.dart';
 import 'package:flutter/material.dart';
-import 'package:profile_module/profile_module.dart';
-import 'package:tickettoollite/MyHomePage.dart';
-import 'package:tickettoollite/MyRouter.dart';
+
 
 void main() {
   runApp(const MyApp());
