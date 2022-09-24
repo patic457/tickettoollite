@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -10,14 +11,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
   var chText = "Profile";
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
+  int _selectedIndex = 0;
 
   void _changeText() {
     setState(() {
@@ -25,39 +20,71 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  static const TextStyle optionStyle = TextStyle(
+    fontSize: 30,
+    fontWeight: FontWeight.bold,
+  );
+
+  final List<Widget> _screenWidget = <Widget>[];
+
+  final List<BottomNavigationBarItem> _menuBar = <BottomNavigationBarItem>[
+    const BottomNavigationBarItem(
+      icon: Icon(FontAwesomeIcons.house),
+      label: 'Home',
+    ),
+    // BottomNavigationBarItem(
+    //   icon: Icon(FontAwesomeIcons.productHunt),
+    //   label: 'Dispatcher',
+    // ),
+    const BottomNavigationBarItem(
+      icon: Icon(FontAwesomeIcons.clockRotateLeft),
+      label: 'History',
+    ),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
+
+  void _createTicket() {
+    Navigator.pushNamed(context, '/create');
+  }
+
   @override
   Widget build(BuildContext context) {
-    var floatingActionButton = FloatingActionButton(
-      onPressed: _incrementCounter,
-      tooltip: 'Increment',
-      child: const Icon(Icons.add),
+    Widget floatingActionButtonv1 = FloatingActionButton.large(
+        backgroundColor: Colors.green[900],
+        child: Icon(FontAwesomeIcons.plus),
+        onPressed: () {});
+
+    Widget bottomNavigationBarv1 = BottomNavigationBar(
+      items: _menuBar,
+      currentIndex: _selectedIndex,
+      elevation: 4.0,
+      selectedItemColor: Colors.green,
+      unselectedItemColor: const Color(0xFF9D9D9D),
+      onTap: _onItemTapped,
     );
-    var appbar = AppBar(
+
+    AppBar appbarv1 = AppBar(
       title: Text(widget.title),
     );
-    var bodyv1 = Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          const Text(
-            'You have pushed the button this many times:',
-          ),
-          Text(
-            '$_counter',
-            style: Theme.of(context).textTheme.headline4,
-          ),
-        ],
-      ),
-    );
-    var bodyv2 = Center(
+
+    Widget bodyv1 = Center(
       child: ElevatedButton(
         child: Text(chText),
         onPressed: _changeText,
       ),
     );
+
     return Scaffold(
-      appBar: appbar,
-      body: bodyv2,
+      appBar: appbarv1,
+      body: bodyv1,
+      bottomNavigationBar: bottomNavigationBarv1,
+      floatingActionButton: floatingActionButtonv1,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 }
