@@ -1,4 +1,4 @@
-name: main
+name: setting_module
 description: A new Flutter package project.
 version: 0.0.1
 homepage:
@@ -10,19 +10,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  font_awesome_flutter: ^10.2.1
-
-
-
-
-  #Modular
-  profile_module:
-    path: ../profile_module
-  ticket_module:
-    path: ../ticket_module
-  setting_module:
-    path: ../setting_module
-
 
 dev_dependencies:
   flutter_test:

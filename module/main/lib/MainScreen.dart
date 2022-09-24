@@ -55,6 +55,10 @@ class _MyHomePageState extends State<MainScreen> {
     Navigator.pushNamed(context, '/profile');
   }
 
+  void _settingScreen() {
+    Navigator.pushNamed(context, '/setting');
+  }
+
   void _createTicket() {
     Navigator.pushNamed(context, '/createTicket');
   }
@@ -88,6 +92,11 @@ class _MyHomePageState extends State<MainScreen> {
           ElevatedButton(
             child: Text('Profile Menu'),
             onPressed: _profileScreen,
+          ),
+          SizedBox(height: 15.0),
+          ElevatedButton(
+            child: Text('Setting Menu'),
+            onPressed: _settingScreen,
           ),
           SizedBox(height: 15.0),
         ],

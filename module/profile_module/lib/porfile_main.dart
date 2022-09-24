@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:profile_module/profile_route.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const ProfileMainScreen());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class ProfileMainScreen extends StatelessWidget {
+  const ProfileMainScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Ticket Tool',
+      title: 'Setting',
       theme: ThemeData(
         primarySwatch: Colors.pink,
       ),

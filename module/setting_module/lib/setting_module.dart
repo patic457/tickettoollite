@@ -1,25 +1,21 @@
 import 'package:flutter/material.dart';
 
-class ProfileScreen extends StatefulWidget {
+class SettingScreen extends StatefulWidget {
   // const Profile({super.key});
 
-  const ProfileScreen({
+  const SettingScreen({
     Key? key,
     required this.title,
   }) : super(key: key);
   final String title;
 
   @override
-  State<ProfileScreen> createState() => _ProfileState();
+  State<SettingScreen> createState() => _PSettingScreenState();
 }
 
-class _ProfileState extends State<ProfileScreen> {
-  void _profileScreen() {
-    Navigator.pushNamed(context, '/');
-  }
-
+class _PSettingScreenState extends State<SettingScreen> {
   void _editAddressScreen() {
-    Navigator.pushNamed(context, '/address');
+    // Navigator.pushNamed(context, '/address');
   }
 
   @override
@@ -32,7 +28,7 @@ class _ProfileState extends State<ProfileScreen> {
             color: Colors.white,
           ),
           onPressed: () {
-            _profileScreen();
+            Navigator.of(context).pop();
           },
         ),
         title: Text(widget.title),
@@ -42,7 +38,7 @@ class _ProfileState extends State<ProfileScreen> {
           padding: const EdgeInsets.all(8.0),
           child: Column(children: [
             Text(
-              'Sunisa Mei',
+              'Moggie Setting',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 20,
@@ -54,7 +50,7 @@ class _ProfileState extends State<ProfileScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text('address'),
+                Text('Setting'),
                 TextButton(
                   onPressed: _editAddressScreen,
                   child: Icon(
