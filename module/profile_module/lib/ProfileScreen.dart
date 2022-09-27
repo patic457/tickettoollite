@@ -14,10 +14,6 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileState extends State<ProfileScreen> {
-  void _profileScreen() {
-    Navigator.pushNamed(context, '/');
-  }
-
   void _editAddressScreen() {
     Navigator.pushNamed(context, '/address');
   }
@@ -32,7 +28,7 @@ class _ProfileState extends State<ProfileScreen> {
             color: Colors.white,
           ),
           onPressed: () {
-            _profileScreen();
+            Navigator.pop(context);
           },
         ),
         title: Text(widget.title),

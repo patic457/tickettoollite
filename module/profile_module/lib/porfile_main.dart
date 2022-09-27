@@ -10,7 +10,7 @@ class ProfileMainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Setting',
+      title: 'Profile',
       theme: ThemeData(
         primarySwatch: Colors.pink,
       ),

@@ -16,11 +16,7 @@ class ProfileRouter {
         return MaterialPageRoute(
             builder: (_) => AddressScreen(title: 'Soso Address Screen'));
       default:
-        return MaterialPageRoute(
-            builder: (_) => Scaffold(
-                  body: Center(
-                      child: Text('No route defined for ${settings.name}')),
-                ));
+        return MyRouter.generateRoute(settings);
     }
   }
 }

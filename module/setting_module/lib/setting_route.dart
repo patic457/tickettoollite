@@ -1,3 +1,4 @@
+import 'package:app/MyRouter.dart';
 import 'package:flutter/material.dart';
 import 'package:setting_module/setting_module.dart';
 
@@ -11,11 +12,7 @@ class SettingRouter {
       //   return MaterialPageRoute(
       //       builder: (_) => AddressScreen(title: 'Soso Address Screen'));
       default:
-        return MaterialPageRoute(
-            builder: (_) => Scaffold(
-                  body: Center(
-                      child: Text('No route defined for ${settings.name}')),
-                ));
+        return MyRouter.generateRoute(settings);
     }
   }
 }
